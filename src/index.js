@@ -1,5 +1,5 @@
 // Import Modules JS Files
-// import 'Blocks/header/header'
+import 'Blocks/header/header'
 // import 'Blocks/footer/footer'
 
 

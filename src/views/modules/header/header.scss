@@ -1,0 +1,275 @@
+// Шапка сайта
+.header {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.header__wrap {
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  flex-shrink: 0;
+
+  @include size(260px, 55px);
+}
+
+.header__logo-img {
+  @include size(100%);
+}
+
+.header__nav {
+  flex-grow: 1;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+
+// Navigation
+.nav {
+  @include reset-list;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  position: relative;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transition: 0.3s;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &--dropdown {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin: 0;
+    }
+  }
+
+  &:hover .nav__dropdown {
+    display: block;
+    top: calc(100% + 0px);
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  &--has-dropdown {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      @include size(10px);
+      background-image: url("../images/chevron-down.svg");
+      background-repeat: no-repeat;
+      margin-left: 10px;
+      transition: 0.2s;
+    }
+
+    &:hover::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.nav__link {
+  font-family: $main-medium-font;
+  font-size: 15px;
+  color: $main-font-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:hover {
+    color: $makro-color;
+  }
+
+  &--dropdown {
+    display: block;
+    padding: 7px 35px;
+    font-size: 14px;
+  }
+}
+
+.nav__dropdown {
+  @include reset-list;
+  // display: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: -30px;
+  background-color: $default-color;
+  box-shadow: 0 0.5em 1em -0.13em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+// Lang
+.lang {
+  position: relative;
+  margin-right: 20px;
+}
+
+
+.lang__current {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  font-family: $main-bold-font;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $makro-color;
+  }
+
+  &:hover .lang__icon svg {
+    fill: $makro-color;
+  }
+}
+
+.lang__text {
+  margin-right: 8px;
+}
+
+.lang__icon {
+  display: block;
+}
+
+.lang__icon svg {
+  @include size(10px);
+}
+
+
+.lang__dropdown-menu {
+  @include reset-list;
+
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  box-shadow: 0 0.5em 1em -0.13em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  opacity: 0;
+  transition: all 0.2s;
+
+  &--active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.lang__list-item {
+  transition: 0.2s;
+}
+
+.lang__list-item-link {
+  @include size(100%);
+  display: block;
+  padding: 5px 30px 5px 20px;
+  color: $main-font-color;
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $makro-color;
+    color: #ffffff;
+  }
+}
+
+
+// Search
+
+.search__open {
+  @include size(17px);
+  cursor: pointer;
+}
+
+.search__open svg {
+  @include size(100%);
+
+  &:hover {
+    fill: $makro-color;
+  }
+}
+
+.search__form {
+  @include size(100%);
+
+  display: flex;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: all 0.3s;
+
+  &--active {
+    top: 0;
+  }
+}
+
+.search__input-wrap {
+  @include size(100%);
+
+  position: relative;
+}
+
+.search__input-icon {
+  @include size(30px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--search {
+    left: 0;
+  }
+
+  &--close {
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+.search__input-icon svg {
+  @include size(100%);
+
+  fill: lighten($makro-color, 20%);
+
+  &:hover {
+    fill: $makro-color;
+  }
+}
+
+.search__input {
+  @include size(100%);
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 40px;
+  border: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 -5px 0 0 lighten($makro-color, 20%);
+  }
+}

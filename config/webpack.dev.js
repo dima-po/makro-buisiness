@@ -37,8 +37,8 @@ module.exports = {
         port: 4000,
         client: {
             overlay: {
-                warnings: true,
-                errors: true,
+                warnings: false,
+                errors: false,
             }
         },
         hot: true
@@ -71,9 +71,9 @@ module.exports = {
                             publicPath: '../'
                         }
                     },
-                    
+
                     'css-loader',
-                    
+
                     {
                         loader: 'postcss-loader',
                         options: {

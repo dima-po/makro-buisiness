@@ -1,9 +1,7 @@
 // Fonts
-$main-font              : "Open Sans", "Arial", "Helvetica", sans-serif;
-$headers-font           : "Gilroy Bold", "Arial", "Helvetica", sans-serif;
-
-$main-light-font        : "Open Sans Light", "Arial", "Helvetica", sans-serif;
-$headers-light-font     : "Gilroy Light", "Arial", "Helvetica", sans-serif;
+$main-font              : "Geometria", "Arial", "Helvetica", sans-serif;
+$main-medium-font       : "Geometria Medium", "Arial", "Helvetica", sans-serif;
+$main-bold-font         : "Geometria ExtraBold", "Arial", "Helvetica", sans-serif;
 
 
 // Size
@@ -20,6 +18,7 @@ $phone-width             : 480px;
 $sm-phone-width          : 320px;
 
 // Main color
+$makro-color             : #6ebb20;
 $default-color           : #ffffff;
 $primary-color           : #444ce0;
 $success-color           : #26de81;

@@ -1,0 +1,55 @@
+header.header
+    .container
+        .header__wrap
+            .header__logo
+                    +svg-image('makro-logo', 'header__logo-img')
+            nav.header__nav
+                ul.nav
+                    li.nav__item.nav__item--has-dropdown
+                        a.nav__link(href="#") О нас
+                        ul.nav__dropdown
+                          li.nav__item.nav__item--dropdown
+                              a.nav__link.nav__link--dropdown(href="#") О нас
+                          li.nav__item.nav__item--dropdown
+                              a.nav__link.nav__link--dropdown(href="#") Инициативы
+                          li.nav__item.nav__item--dropdown
+                              a.nav__link.nav__link--dropdown(href="#") Потребителям
+                          li.nav__item.nav__item--dropdown
+                              a.nav__link.nav__link--dropdown(href="#") Партнерам
+                          li.nav__item.nav__item--dropdown
+                              a.nav__link.nav__link--dropdown(href="#") Пресс-центр
+                          li.nav__item.nav__item--dropdown
+                              a.nav__link.nav__link--dropdown(href="#") Карьера
+
+
+                    li.nav__item
+                        a.nav__link(href="#") Инициативы
+                    li.nav__item
+                        a.nav__link(href="#") Потребителям
+                    li.nav__item
+                        a.nav__link(href="#") Партнерам
+                    li.nav__item
+                        a.nav__link(href="#") Пресс-центр
+                    li.nav__item
+                        a.nav__link(href="#") Карьера
+            .header__lang.lang
+                button.lang__current(aria-haspopup='true' aria-controls='dropdown-menu')
+                    span.lang__text Рус
+                    span.lang__icon
+                      +svg-image('icon-down', '')
+                ul.lang__dropdown-menu(role='menu')
+                    li.lang__list-item
+                        a.lang__list-item-link(href="#") Eng
+                    li.lang__list-item
+                        a.lang__list-item-link(href="#") Uzb
+
+            .header__search.search
+                .search__open
+                    +svg-image('icon-search', '')
+                form.search__form(action="")
+                    .search__input-wrap
+                      .search__input-icon.search__input-icon--search
+                        +svg-image('icon-search', '')
+                      .search__input-icon.search__input-icon--close
+                        +svg-image('icon-close', '')
+                      input.search__input(type="text" name="search" placeholder="Поиск по сайту" autocomplete="off")
