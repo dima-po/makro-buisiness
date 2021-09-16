@@ -1,3 +1,24 @@
-mixin svg-image(name, className)
-    svg(class= className)
+mixin svg-image(name, className, width, height)
+    svg(class= className, width= width, height= height)
         use(xlink:href=`images/sprites.svg#${name}`)
+
+//- mixin responsive-images(imageLinkMobile, imageLinkTablet, imageLinkDesktop, width, height, alt, imgClass, pictureClass)
+//-   picture(class=(pictureClass ? pictureClass : ''))
+//-     source(media="(min-width: 1200px)", srcset= imageLinkDesktop + '@1x.webp 1x, ' + imageLinkDesktop + '@2x.webp 2x', type="image/webp")
+//-     source(media="(min-width: 768px)", srcset= imageLinkTablet + '@1x.webp 1x, ' + imageLinkTablet + '@2x.webp 2x', type="image/webp")
+//-     source(srcset= imageLinkMobile + '@1x.webp 1x, ' + imageLinkMobile + '@2x.webp 2x' type="image/webp")
+
+//-     source(media="(min-width: 1200px)", srcset= imageLinkDesktop + '@1x.jpg 1x, ' + imageLinkDesktop + '@2x.jpg 2x', type="image/jpg")
+//-     source(media="(min-width: 768px)", srcset= imageLinkTablet + '@1x.jpg 1x, ' + imageLinkTablet + '@2x.jpg 2x', type="image/jpg")
+//-     img(class=(imgClass ? imgClass : '') src= imageLinkMobile + '@1x.jpg', srcset= imageLinkMobile + '@1x.jpg 1x, ' + imageLinkMobile + '@2x.jpg 2x' width= width, height= height, alt= alt)
+
+
+mixin responsive-images(imageLinkMobile, imageLinkTablet, imageLinkDesktop, width, height, alt, imgClass, pictureClass)
+  picture(class=(pictureClass ? pictureClass : ''))
+    //- source(media="(min-width: 1200px)", srcset= imageLinkDesktop + '@1x.webp 1x, ' + imageLinkDesktop + '@2x.webp 2x', type="image/webp")
+    //- source(media="(min-width: 768px)", srcset= imageLinkTablet + '@1x.webp 1x, ' + imageLinkTablet + '@2x.webp 2x', type="image/webp")
+    //- source(srcset= imageLinkMobile + '@1x.webp 1x, ' + imageLinkMobile + '@2x.webp 2x' type="image/webp")
+
+    source(media="(min-width: 1200px)", srcset= imageLinkDesktop type="image/jpg")
+    source(media="(min-width: 768px)", srcset= imageLinkTablet type="image/jpg")
+    img(class=(imgClass ? imgClass : '') src= imageLinkMobile, srcset= imageLinkMobile width= width, height= height, alt= alt)

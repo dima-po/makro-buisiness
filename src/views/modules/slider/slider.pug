@@ -1,0 +1,19 @@
+section.slider
+  .slider__wrapper
+    ul.slider__content
+      li.slider__item
+        a.slider__link(href="")
+        +responsive-images(
+          "https://via.placeholder.com/767x700",
+          "https://via.placeholder.com/768x500",
+          "images/hp-image-slider-1.jpg",
+          1920,
+          730,
+          "Изображение слайдера",
+          "slider__image"
+        )
+
+    ul.slider__navigation
+      li.slider__bullet.slider__bullet--active
+      li.slider__bullet
+      li.slider__bullet

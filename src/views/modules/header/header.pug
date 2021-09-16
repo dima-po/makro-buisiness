@@ -2,7 +2,7 @@ header.header
     .container
         .header__wrap
             .header__logo
-                    +svg-image('makro-logo', 'header__logo-img')
+                    +svg-image('makro-logo', 'header__logo-img', 260, 55)
             nav.header__nav
                 ul.nav
                     li.nav__item.nav__item--has-dropdown
@@ -36,7 +36,7 @@ header.header
                 button.lang__current(aria-haspopup='true' aria-controls='dropdown-menu')
                     span.lang__text Рус
                     span.lang__icon
-                      +svg-image('icon-down', '')
+                      +svg-image('icon-down', '', 10, 10)
                 ul.lang__dropdown-menu(role='menu')
                     li.lang__list-item
                         a.lang__list-item-link(href="#") Eng
@@ -45,11 +45,11 @@ header.header
 
             .header__search.search
                 .search__open
-                    +svg-image('icon-search', '')
+                    +svg-image('icon-search', '', 17, 17)
                 form.search__form(action="")
                     .search__input-wrap
                       .search__input-icon.search__input-icon--search
-                        +svg-image('icon-search', '')
+                        +svg-image('icon-search', '', 17, 17)
                       .search__input-icon.search__input-icon--close
-                        +svg-image('icon-close', '')
+                        +svg-image('icon-close', '', 30, 30)
                       input.search__input(type="text" name="search" placeholder="Поиск по сайту" autocomplete="off")

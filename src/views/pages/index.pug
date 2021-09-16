@@ -1,12 +1,17 @@
 extends ../layouts/default
 
 block variables
-	- const title = "Project title"
+  - const title = "Project title"
 
 block content
-	//- Site Header
-	include ../modules/header/header
+  //- Site Header
+  include ../modules/header/header
 
-	//- Site Footer
-	//- include ../modules/footer/footer
+  main.page-content
+
+    //- Site Slider
+    include ../modules/slider/slider
+
+  //- Site Footer
+  //- include ../modules/footer/footer
 block scripts
