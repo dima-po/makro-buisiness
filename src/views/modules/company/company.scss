@@ -1,0 +1,31 @@
+.company {
+  background-color: $makro-color;
+  color: $default-color;
+}
+
+.company___numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.company__number {
+  display: block;
+  margin-bottom: 10px;
+  font-family: $main-bold-font;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.company__number-description {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.company___about-text {
+  color: rgba($default-color, 0.8);
+}
