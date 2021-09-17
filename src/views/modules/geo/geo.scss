@@ -1,0 +1,31 @@
+.geo {}
+
+.geo__region {
+  position: relative;
+  stroke: $default-color;
+  stroke-width: 1px;
+  fill: $neutral-placeholder;
+  transition: all 0.2s;
+
+  // &::before {
+  //   content: attr(data-stores);
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   color: $main-font-color;
+  // }
+
+  &::before {
+    content: 'Привет';
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: $main-font-color;
+    color: $neutral-placeholder;
+  }
+
+  &:hover {
+    fill: $makro-color;
+  }
+}

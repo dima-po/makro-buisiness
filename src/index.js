@@ -1,6 +1,8 @@
 // Import Modules JS Files
 import 'Blocks/header/header'
-// import 'Blocks/footer/footer'
+
+// Import Modules JS Files
+import 'Blocks/geo/geo'
 
 
 // Import Main SCSS File
