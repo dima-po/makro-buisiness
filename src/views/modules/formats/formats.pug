@@ -1,0 +1,23 @@
+- const formats = ["City", "Super", "Express"];
+
+section.formats
+  .formats__wrap
+    h2.section-header.section-header--is-centered Наши форматы
+    .formats__grid
+      each format, index in formats
+        .formats__item
+          figure.formats__img-wrap
+            img.formats__img(src="images/formats-img-" + (index + 1) + ".jpg" alt= "Формат " + format)
+          header.formats__headers
+            span.formats__header-small Формат
+            span.formats__header-big= format
+
+          div.formats__item-body
+            header.formats__item-body-header
+              p ВСЕГО МАГАЗИНОВ: 11
+              p ОБЩАЯ ПЛОЩАДЬ: 22 000 м
+                sup 2
+            footer.formats__item-body-footer
+              p Площадь от 2000 м
+                sup 2
+              p Ассортимент от 15 000 SKU

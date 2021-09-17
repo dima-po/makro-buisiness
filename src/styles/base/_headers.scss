@@ -1,5 +1,20 @@
 .section-header {
-  // font-family: $main-bold-font;
+  margin: 0;
+  margin-bottom: 30px;
   color: $default-color;
   text-transform: uppercase;
+  font-size: 30px;
+
+  &--is-absolute {
+    margin: 0;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &--is-centered {
+    text-align: center;
+  }
 }
