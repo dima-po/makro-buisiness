@@ -1,5 +1,14 @@
 .geo {}
 
+.columns--geo {
+  align-items: center;
+
+  @media (max-width: $table-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .geo__region {
   position: relative;
   stroke: $default-color;
@@ -27,5 +36,46 @@
 
   &:hover {
     fill: $makro-color;
+  }
+}
+
+
+.geo__present {
+  margin-bottom: 80px;
+  color: $makro-color;
+
+  @media (max-width: $table-width) {
+    order: 1;
+  }
+}
+
+.geo__present-title {
+  font-family: $main-medium-font;
+  font-size: 35px;
+  line-height: 1.2;
+  color: $main-font-color;
+  text-transform: uppercase;
+}
+
+.geo__present-count {
+  margin-bottom: 10px;
+  font-family: $main-bold-font;
+  font-size: 160px;
+  line-height: 1;
+}
+
+.geo__present-text {
+  font-size: 35px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+
+.geo__description {
+  font-size: 22px;
+  // text-align: right;
+
+  @media (max-width: $table-width) {
+    order: 2;
   }
 }
