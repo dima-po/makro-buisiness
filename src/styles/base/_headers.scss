@@ -17,4 +17,8 @@
   &--is-centered {
     text-align: center;
   }
+
+  &--is-dark {
+    color: $main-font-color;
+  }
 }

@@ -3,9 +3,9 @@
 section.formats
   .formats__wrap
     h2.section-header.section-header--is-centered Наши форматы
-    .formats__grid
+    section.formats__grid
       each format, index in formats
-        .formats__item
+        article.formats__item
           figure.formats__img-wrap
             img.formats__img(src="images/formats-img-" + (index + 1) + ".jpg" alt= "Формат " + format)
           header.formats__headers

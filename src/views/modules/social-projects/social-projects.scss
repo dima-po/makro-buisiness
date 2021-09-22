@@ -1,0 +1,42 @@
+.social-projects {
+  position: relative;
+}
+
+.social-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 500px;
+}
+
+.social-projects__item {
+  position: relative;
+  user-select: none;
+
+  &::before {
+    content: "";
+    @include position-cover();
+  }
+}
+
+.social-projects__img-wrap {
+  @include size(100%);
+  margin: 0;
+}
+
+.social-projects__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.social-projects__header {
+  @include position-center();
+
+  font-family: $main-medium-font;
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: center;
+  color: $default-color;
+  text-transform: uppercase;
+}

@@ -1,0 +1,11 @@
+- const socials = ["Спорт и здоровье", "Защита экологии", "Благотворительность"];
+
+section.social-projects
+  .social-projects__wrap
+    h2.section-header.section-header--is-centered.section-header--is-dark Социальные проекты
+    section.social-projects__grid
+      each social, index in socials
+        article.social-projects__item
+          figure.social-projects__img-wrap
+            img.social-projects__img(src="images/social-projects-img-" + (index+1) + ".jpg", width="1000" height="800" alt= social)
+          header.social-projects__header= social
