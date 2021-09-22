@@ -1,0 +1,50 @@
+.footer {
+  position: relative;
+  background-color: $neutral-primary;
+}
+
+.footer__wrap {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  gap: 20px;
+  color: $default-color;
+
+  @include for-phone {
+    grid-template-columns: 100%;
+  }
+}
+
+
+.footer__menu-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+
+
+
+
+
+
+
+.footer__markets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__markets-header {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.footer__market {
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

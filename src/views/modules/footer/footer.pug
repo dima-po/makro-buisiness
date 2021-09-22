@@ -1,0 +1,67 @@
+//- - const headers = ['О нас','Социальные проекты','Потребителям','Партнерам']
+- const abouts = ['Обращение Сео','Политика','Команда','Магазины','Сообщества','Карьера']
+- const socials = ['Спорт и здоровье','Защита экологии','Балготвориительность']
+- const customers = ['Внутренние правила','Закон о потребителе','Программа лояльности','Жалобы и пожелания','Доставка', 'Акции']
+- const partners = ['Тендеры','Хочу с вами работать','Поставщикам', 'B2B','Приобрести ваучер','Отдел рекламы']
+- const social_svg = ['social-fb','social-ig','social-in','social-ok','social-tg','social-youtube']
+
+footer.footer.section.is-medium
+  .footer__wrap
+    section.footer__menu-content
+      nav.footer__menu
+        section.footer__menu-column
+          header.footer__header О нас
+          ul.footer__menu-list
+            each item in abouts
+              li.footer__menu-item
+                a.footer__menu-link(href="#")= item
+
+        section.footer__menu-column
+          header.footer__header Социальные проекты
+          ul.footer__menu-list
+            each item in socials
+              li.footer__menu-item
+                a.footer__menu-link(href="#")= item
+
+        section.footer__menu-column
+          header.footer__header Потребителям
+          ul.footer__menu-list
+            each item in customers
+              li.footer__menu-item
+                a.footer__menu-link(href="#")= item
+
+        section.footer__menu-column
+          header.footer__header Партнерам
+          ul.footer__menu-list
+            each item in partners
+              li.footer__menu-item
+                a.footer__menu-link(href="#")= item
+
+      section.footer__makro-links
+
+        section.footer__makro-links-column
+          header.footer__header Мы в соцсетях
+          ul.footer__socials
+            each social in social_svg
+              li.footer__socials-item
+                a.footer__socials-item(href="#")
+                  +svg-image(social, 'footer__socials-svg', 20, 20)
+
+        section.footer__makro-links-column
+          header.footer__header Техподдержка
+          a.footer__phone(href="tel:+998712051205") +998 71 205 1 205
+
+        section.footer__makro-links-column
+          header.footer__header Сертификация ISO
+          a.footer__iso-certification(href="#")
+            img(src="images/iso-certification.png", width="390" height="98" alt="Сертификация ISO")
+
+
+    section.footer__markets
+      header.footer__markets-header E makro
+      a.footer__market(href="#")
+        img(src="images/footer-makro-logo.png", width="197" height="197" alt="Makro Logo")
+      a.footer__market(href="#")
+        img(src="images/footer-app-store.png", width="200" height="63" alt="Makro Application")
+      a.footer__market(href="#")
+        img(src="images/footer-play-market.png", width="200" height="63" alt="Makro Application")
