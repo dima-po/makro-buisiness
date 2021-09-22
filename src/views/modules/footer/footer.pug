@@ -44,12 +44,14 @@ footer.footer.section.is-medium
           ul.footer__socials
             each social in social_svg
               li.footer__socials-item
-                a.footer__socials-item(href="#")
+                a.footer__socials-item-link(href="#")
                   +svg-image(social, 'footer__socials-svg', 20, 20)
 
         section.footer__makro-links-column
           header.footer__header Техподдержка
-          a.footer__phone(href="tel:+998712051205") +998 71 205 1 205
+          a.footer__phone-link(href="tel:+998712051205")
+            +svg-image('phone-icon', 'footer__phone-link-svg', 22, 22)
+            | 998 (71) 205-1-205
 
         section.footer__makro-links-column
           header.footer__header Сертификация ISO
