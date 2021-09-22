@@ -1,0 +1,31 @@
+section.section.is-medium.e-makro
+  .container
+    h2.section-header.section-header--is-dark Система лояльности E-Makrо
+    //- .e-makro__description
+    //-   section.e-makro__loyalty
+    //-     header.e-makro__loyalty-header Приложения в популярных маркетах
+    //-     .e-makro__loyalty-links
+    //-       a.e-makro__loyalty-link.e-makro__loyalty-link--market(href="#" target="_blank")
+    //-         img(src="images/google-play.png", width="174" height="57" alt="Приложение в Google Play")
+    //-       a.e-makro__loyalty-link.e-makro__loyalty-link--market(href="#" target="_blank")
+    //-         img(src="images/app-store.png", width="198" height="57" alt="Приложение в App Store")
+
+    section.e-makro__loyalty
+      p.e-makro__text
+        b Система лояльности состоит из 3х частей: Приложения, телеграм бот и физические карты.
+        |  Уникальный для Узбекистана кеш бек в размере 5% можно получить при оплате через платежную систему клик и использовании приложения на кассе.
+      .e-makro__loyalty-links
+        a.e-makro__loyalty-link(href="#" target="_blank")
+          +svg-image("google-play", "e-makro__loyalty-svg", 50, 50)
+          p.e-makro__loyalty-link-title Google Play
+        a.e-makro__loyalty-link(href="#" target="_blank")
+          +svg-image("app-store", "e-makro__loyalty-svg", 50, 50)
+          p.e-makro__loyalty-link-title App Store
+        a.e-makro__loyalty-link(href="#" target="_blank")
+          +svg-image("telegram-circle", "e-makro__loyalty-svg", 50, 50)
+          p.e-makro__loyalty-link-title Телеграм бот
+        a.e-makro__loyalty-link(href="#" target="_blank")
+          +svg-image("makro-card", "e-makro__loyalty-svg", 50, 50)
+          p.e-makro__loyalty-link-title Физические карты
+
+      a.button.is-makro.is-large.e-makro__button(href="#") Подробнее

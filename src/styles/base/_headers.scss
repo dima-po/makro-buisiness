@@ -1,9 +1,10 @@
 .section-header {
   margin: 0;
   margin-bottom: 30px;
+  font-family: $main-medium-font;
+  font-size: 30px;
   color: $default-color;
   text-transform: uppercase;
-  font-size: 30px;
 
   &--is-absolute {
     margin: 0;
@@ -20,5 +21,9 @@
 
   &--is-dark {
     color: $main-font-color;
+  }
+
+  &--is-big {
+    font-size: 60px;
   }
 }

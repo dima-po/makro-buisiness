@@ -63,3 +63,16 @@ $z-indexes: (
 
 // BULMA Variables
 $section-padding-medium: 7rem 4.5rem;
+
+
+// 4. Setup your Custom Colors
+$makro: #6ebb20;
+$makro-invert: #ffffff;
+
+// 5. Add new color variables to the color map.
+@import "../../../node_modules/bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+  "makro":($makro, $makro-invert),
+);
+
+$colors: map-merge($colors, $addColors);
