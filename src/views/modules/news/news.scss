@@ -1,0 +1,80 @@
+.news {
+  position: relative;
+}
+
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 500px;
+}
+
+.news__card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &::before {
+    content: "";
+    @include position-cover(false, linear-gradient(180deg, rgba(255,255,255,0) 5%, rgba(110,187,32,1) 85%));
+    transition: all 0.2s;
+  }
+
+  &:hover {
+
+    .news__img {
+      @include size(110%);
+    }
+  }
+}
+
+.news__link {
+  @include position-cover(transparent, false);
+  z-index: 10;
+}
+
+.news__img-wrap {
+  @include size(100%);
+  margin: 0;
+}
+
+.news__img {
+  @include size(100%);
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s;
+}
+
+.news__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  color: $default-color;
+}
+
+.news__header {
+  margin-bottom: 5px;
+  font-family: $main-bold-font;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.news__date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+
+  &::before {
+    content: "";
+    @include size(20px);
+    margin-right: 10px;
+    background-image: url("../images/news-date-icon-white.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.news__excerpt {
+  margin: 0;
+  font-size: 18px;
+}

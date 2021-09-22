@@ -1,0 +1,15 @@
+- const headers = ['А у нас тут новости появились','Короткий заголовок','О нас пишут']
+
+section.news
+  .news__wrap
+    section.news__grid
+      each header, index in headers
+        article.news__card
+          a.news__link(href="#")
+          figure.news__img-wrap
+            img.news__img(src="images/formats-img-" + (index+1) + ".jpg", alt= header)
+          .news__content
+            header.news__header= header
+            time.news__date 15.09.2021
+            p.news__excerpt В этот прекрасный день 105 магазин Makro, расположенный в Magic City открыл свои двери
+
