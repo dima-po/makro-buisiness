@@ -3,7 +3,8 @@
 
   "ignoreFiles": [
     "src/styles/base/_sprites.scss",
-    "src/styles/helpers/_mixins.scss"
+    "src/styles/helpers/_mixins.scss",
+    "src/styles/helpers/_media.scss"
   ],
 
   "plugins": [

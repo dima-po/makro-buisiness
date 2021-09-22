@@ -1,21 +1,20 @@
 section.geo.section.is-medium
   .container.is-fluid
-    .columns.columns--geo
-      .column.is-8
-        .geo__country
-          include ./geo-svg
+    .geo__wraper
 
-      .column.is-4
-        .geo__information
-          .geo__present
-            header.geo__present-title(data-title="География присутствия")
-              | География
-              br
-              | присутствия
-            .geo__present-count(data-count="28") 28
-            .geo__present-text(data-text="городов") городов
+      .geo__country
+        include ./geo-svg
 
-          .geo__description Сеть имеет 2 основных склада в Ташкенте и в Ферганской области (город Олтыарык). Наш бэк-офис управляется SAP, фронт-офис - ATOL и BI, внедрена WMS AXELOT.
+      .geo__information
+        .geo__present
+          header.geo__present-title(data-title="География<br>присутствия")
+            | География
+            br
+            | присутствия
+          .geo__present-count(data-count="28") 28
+          .geo__present-text(data-text="городов") городов
+
+        .geo__description Сеть имеет 2 основных склада в Ташкенте и в Ферганской области (город Олтыарык). Наш бэк-офис управляется SAP, фронт-офис - ATOL и BI, внедрена WMS AXELOT.
 
 
 

@@ -1,51 +1,76 @@
-.geo {}
+.geo {
+  position: relative;
+}
 
-.columns--geo {
+.container.is-fluid {
+  @include for-tablet {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.geo__wraper {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 
-  @media (max-width: $table-width) {
-    display: flex;
-    flex-wrap: wrap;
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
   }
 }
 
 .geo__region {
-  position: relative;
   stroke: $default-color;
   stroke-width: 1px;
   fill: $neutral-placeholder;
   transition: all 0.2s;
 
-  // &::before {
-  //   content: attr(data-stores);
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   color: $main-font-color;
-  // }
-
-  &::before {
-    content: 'Привет';
-    display: block;
-    width: 200px;
-    height: 50px;
-    background-color: $main-font-color;
-    color: $neutral-placeholder;
-  }
-
   &:hover {
     fill: $makro-color;
+    cursor: pointer;
   }
 }
 
+
+.geo__country {
+  width: 65%;
+  margin-right: 30px;
+
+  @include for-tablet {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.geo__information {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+
+  @include for-tablet {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include for-phone {
+    flex-direction: column;
+  }
+}
 
 .geo__present {
   margin-bottom: 80px;
   color: $makro-color;
 
-  @media (max-width: $table-width) {
-    order: 1;
+  @include for-tablet {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @include for-phone {
+    margin-right: 0;
   }
 }
 
@@ -55,6 +80,15 @@
   line-height: 1.2;
   color: $main-font-color;
   text-transform: uppercase;
+
+  @include for-big-desktop {
+    font-size: 45px;
+    line-height: 1.3;
+  }
+
+  @include for-phone {
+    font-size: 28px;
+  }
 }
 
 .geo__present-count {
@@ -62,20 +96,36 @@
   font-family: $main-bold-font;
   font-size: 160px;
   line-height: 1;
+
+  @include for-big-desktop {
+    font-size: 200px;
+  }
+
+  @include for-phone {
+    font-size: 120px;
+  }
 }
 
 .geo__present-text {
   font-size: 35px;
   line-height: 1;
   text-transform: uppercase;
+
+  @include for-big-desktop {
+    font-size: 40px;
+  }
 }
 
 
 .geo__description {
   font-size: 22px;
-  // text-align: right;
 
-  @media (max-width: $table-width) {
-    order: 2;
+  @include for-big-desktop {
+    font-size: 25px;
+  }
+
+  @include for-phone {
+    font-size: 18px;
+    text-align: center;
   }
 }
