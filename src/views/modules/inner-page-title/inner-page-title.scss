@@ -1,0 +1,63 @@
+.page-title__wrap {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  justify-content: flex-end;
+  color: lighten($makro-color, 10%);
+}
+
+.page-title__bg-img {
+  @include position-cover();
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    content: "";
+    @include position-cover(rgba(0,0,0,0.4));
+  }
+}
+
+.page-title__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 25px;
+  width: 35%;
+  margin: 80px;
+  padding: 50px;
+  border: 9px solid lighten($makro-color, 10%);
+}
+
+.page-title__header {
+  margin: 0;
+  font-family: $main-bold-font;
+  font-size: 50px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.page-title__short-text {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.page-title__anchor {
+  align-self: flex-start;
+  border-bottom: 2px solid lighten($makro-color, 10%);
+  font-family: $main-bold-font;
+  font-size: 17px;
+  color: lighten($makro-color, 10%);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $makro-color;
+    border-bottom-color: $makro-color;
+    border-bottom-style: dashed;
+  }
+}
+
