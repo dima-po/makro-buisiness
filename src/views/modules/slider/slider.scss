@@ -17,12 +17,14 @@
   right: 0;
   bottom: 0;
   left: 0;
+
   @include size(100%);
   z-index: 9;
 }
 
 .slider__image {
   display: block;
+
   @include size(100%, auto);
 }
 
@@ -34,11 +36,13 @@
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+
   @include reset-list;
 }
 
 .slider__bullet {
   position: relative;
+
   @include size(20px);
   border: 2px solid $default-color;
   border-radius: 50%;
@@ -49,12 +53,12 @@
   }
 
   &--active {
-
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
+
       @include size(70%);
       border-radius: 50%;
       background-color: $default-color;

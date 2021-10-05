@@ -15,12 +15,12 @@
 
   &::before {
     content: "";
+
     @include position-cover(false, linear-gradient(180deg, rgba(255,255,255,0) 5%, rgba(110,187,32,1) 85%));
     transition: all 0.2s;
   }
 
   &:hover {
-
     .news__img {
       @include size(110%);
     }
@@ -67,6 +67,7 @@
 
   &::before {
     content: "";
+
     @include size(20px);
     margin-right: 10px;
     background-image: url("../images/news-date-icon-white.svg");

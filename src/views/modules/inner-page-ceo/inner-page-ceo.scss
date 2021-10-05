@@ -1,0 +1,14 @@
+// .ceo__photo {
+//   margin: 0;
+// }
+
+// .ceo__photo img {
+//   @include size(100%, auto);
+// }
+
+.ceo__name {
+  margin-top: 20px;
+  font-family: $main-medium-font;
+  font-size: 23px;
+  text-transform: uppercase;
+}

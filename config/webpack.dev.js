@@ -26,7 +26,7 @@ module.exports = {
     output: {
         filename: 'js/bundle.js',
         path: PATHS.dist,
-        // publicPath: ''
+        publicPath: ''
     },
 
     devServer: {
@@ -162,6 +162,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: `${PATHS.src}/static`, to: '' },
+                // { from: `${PATHS.src}/images`, to: 'images' },
             ]
         }),
 

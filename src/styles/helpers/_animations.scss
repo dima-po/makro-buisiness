@@ -19,3 +19,23 @@
     transform: translate(calc(-50% - 10px), -50%);
   }
 }
+
+@keyframes show-sidebar {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide-sidebar {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}

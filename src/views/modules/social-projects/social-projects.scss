@@ -14,6 +14,7 @@
 
   &::before {
     content: "";
+
     @include position-cover();
   }
 }

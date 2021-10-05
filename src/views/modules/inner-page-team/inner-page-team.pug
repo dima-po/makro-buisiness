@@ -1,16 +1,48 @@
 section.makro-team.section.is-medium
   .container
 
-    section.page__description
+    section.makro-team__description
       p Под руководством главного исполнительного директора менеджмент осуществляет оперативное управление компанией, обеспечивает работу функциональных подразделений и соблюдение всех применимых законодательных и иных нормативных актов, а также управление рисками, связанными с деятельностью компании.
 
-    section.makro-team__wrap
-      section.makro-team__content.makro-team__content--single
+    section.makro-team__content
+      section.makro-team__grid
         header.makro-team__grid-header Руководитель
+        section.makro-team__cards.makro-team__cards--single
+          article.makro-team__card
+            figure.makro-team__card-person-photo
+              img(src=require("../../../images/team-member.jpg"), width="400", height="400" alt="Роман Сайфулин")
+            h3.makro-team__card-person-name Роман Сайфулин
+            p.makro-team__card-person-position генеральный директор
+
+
+      section.makro-team__grid
+        header.makro-team__grid-header Маркетинг
         section.makro-team__cards
           article.makro-team__card
             figure.makro-team__card-person-photo
               img(src="images/team-member.jpg", width="400", height="400" alt="Роман Сайфулин")
-            h3.makro-team__card-person-name Роман Сайфулин
-            p.makro-team__card-person-position генеральный директор
+            h3.makro-team__card-person-name John Doe
+            p.makro-team__card-person-position Маркетинг
 
+          - var n = 0;
+          while n < 5
+            - ++n
+            article.makro-team__card
+              figure.makro-team__card-person-photo
+                img(src="images/team-member.jpg", width="400", height="400" alt="Роман Сайфулин")
+              h3.makro-team__card-person-name John Doe
+              p.makro-team__card-person-position Маркетинг
+
+      section.makro-team__sidebar
+        .makro-team__sidebar-overlay
+
+        .makro-team__sidebar-body
+          .makro-team__sidebar-controls
+            button.makro-team__sidebar-close Закрыть
+
+          .makro-team__sidebar-person
+            figure.makro-team__sidebar-person-photo
+                img(src="images/team-member.jpg", width="400", height="400" alt="Роман Сайфулин")
+            h3.makro-team__sidebar-person-name Роман Сайфулин
+            p.makro-team__sidebar-person-position генеральный директор
+            p.makro-team__sidebar-person-text Под руководством главного исполнительного директора менеджмент осуществляет оперативное управление компанией, обеспечивает работу функциональных подразделений и соблюдение всех применимых законодательных и иных нормативных актов, а также управление рисками, связанными с деятельностью компании. Под руководством главного исполнительного директора менеджмент осуществляет оперативное управление компанией, обеспечивает работу функциональных подразделений и соблюдение всех применимых законодательных и иных нормативных актов, а также управление рисками, связанными с деятельностью компании.

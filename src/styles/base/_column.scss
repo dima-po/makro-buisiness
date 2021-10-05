@@ -1,0 +1,27 @@
+.column__photo {
+  margin: 0;
+}
+
+.column__photo img {
+  @include size(100%, auto);
+}
+
+.column__text {
+  padding-right: 50px;
+
+  &--large {
+    font-size: 23px;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.column__header {
+  margin-top: 50px;
+  font-size: 30px;
+  color: $makro-color;
+  text-transform: uppercase;
+  text-align: center;
+}

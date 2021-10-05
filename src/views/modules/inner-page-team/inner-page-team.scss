@@ -2,12 +2,217 @@
   position: relative;
 }
 
-.page__description p {
+.makro-team__description p {
   margin: 0;
+  margin-bottom: 90px;
   padding-left: 100px;
   padding-right: 100px;
   font-size: 23px;
   line-height: 1.7;
   background-color: $default-color;
   text-align: center;
+}
+
+.makro-team__grid {
+  position: relative;
+  margin-bottom: 100px;
+  padding-top: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &::before {
+    @include size(100%, 250px);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $makro-color;
+    z-index: -1;
+    content: "";
+  }
+}
+
+.makro-team__grid-header {
+  margin-bottom: 60px;
+  font-family: $main-bold-font;
+  font-size: 40px;
+  color: $default-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.makro-team__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+
+  &--single {
+    justify-content: center;
+  }
+}
+
+.makro-team__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .makro-team__card-person-name,
+    .makro-team__card-person-position {
+      color: $makro-color;
+    }
+
+    .makro-team__card-person-photo {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.makro-team__card-person-photo {
+  @include size(350px, 350px);
+  margin: 0;
+  margin-bottom: 15px;
+  filter: grayscale(1);
+  transition: all 0.2s;
+}
+
+.makro-team__card-person-photo img {
+  @include size(100%, auto);
+  object-fit: cover;
+  object-position: center;
+}
+
+.makro-team__card-person-name {
+  margin: 0;
+  font-family: $main-medium-font;
+  font-size: 24px;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.makro-team__card-person-position {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+.makro-team__sidebar {
+  @include size(100%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  // background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.makro-team__sidebar-overlay {
+  @include position-cover();
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.makro-team__sidebar-body {
+  @include size(100%);
+  max-width: 450px;
+  padding: 0 50px 30px 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $default-color;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: all 0.6s;
+  z-index: 9999;
+  // animation: hide-sidebar 0.5s 0.2s backwards;
+
+  &--active {
+    transform: translateX(0);
+    // animation: show-sidebar 0.5s 0.2s alternate;
+  }
+}
+
+.makro-team__sidebar-controls {
+  padding: 15px 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.makro-team__sidebar-close {
+  @include size(40px);
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  cursor: pointer;
+
+  &::before {
+    @include size(100%, 1px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $main-font-color;
+    transform: rotate(45deg) translateY(-50%);
+    content: "";
+  }
+
+  &::after {
+    @include size(100%, 1px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $main-font-color;
+    transform: rotate(-45deg) translateY(-50%);
+    content: "";
+  }
+}
+
+.makro-team__sidebar-person-photo {
+  @include size(100%);
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.makro-team__sidebar-person-photo img {
+  @include size(100%, auto);
+}
+
+.makro-team__sidebar-person-name {
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: $main-bold-font;
+  font-size: 30px;
+}
+
+.makro-team__sidebar-person-position {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.makro-team__sidebar-person-text {
+  font-size: 15px;
+  line-height: 1.4;
 }
