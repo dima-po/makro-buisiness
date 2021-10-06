@@ -10,6 +10,7 @@
   min-height: 110px;
   display: flex;
   align-items: center;
+  z-index: 10;
 
   @include mq('tablet-wide', max) {
     padding: 10px;
@@ -24,6 +25,11 @@
   @include mq('tablet-wide', max) {
     margin-right: auto;
   }
+
+  @include mq('phone-wide', max) {
+    flex-shrink: 1;
+    margin-right: 25px;
+  }
 }
 
 .header__logo-img {
@@ -34,16 +40,26 @@
   flex-grow: 1;
   margin-right: 30px;
   margin-left: 30px;
+  transition: all 0.2s;
 
   @include mq('tablet-wide', max) {
     position: absolute;
-    top: 100%;
+    top: 50%;
     left: 0;
     width: 100%;
     margin: 0;
     padding: 20px;
     border-top: 1px solid rgba($main-font-color, 0.1);
     background-color: $default-color;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10;
+
+    &--active {
+      top: 100%;
+      opacity: 1;
+      visibility: visible
+    }
   }
 }
 
@@ -180,20 +196,22 @@
 
   @include mq('tablet-wide', max) {
     @include size(100%, 0);
+    overflow: hidden;
+    opacity: 1;
 
     padding: 0;
     position: relative;
     top: 0;
     left: 0;
     visibility: visible;
-    opacity: 0;
+    // opacity: 0;
     box-shadow: none;
     pointer-events: initial;
 
     &--active {
+      height: auto;
       padding-top: 5px;
       padding-bottom: 0;
-      opacity: 1;
     }
   }
 }
@@ -376,6 +394,7 @@
 .header__mobile-nav {
   @include size(30px, 20px);
 
+  flex-shrink: 0;
   position: relative;
   padding: 0;
   margin: 0;

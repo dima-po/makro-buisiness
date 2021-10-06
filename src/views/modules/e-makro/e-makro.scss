@@ -5,11 +5,23 @@
   background-position: right bottom;
   // background-size: 1000px 650px;
   background-size: auto 80%;
+
+  @include mq('tablet-wide', max) {
+    background-size: auto 50%;
+  }
+
+  @include mq('tablet', max) {
+    background: none;
+  }
 }
 
 .e-makro__loyalty {
   width: 40%;
   margin-bottom: 30px;
+
+  @include mq('tablet', max) {
+    width: 100%;
+  }
 }
 
 .e-makro__loyalty-header {
@@ -25,7 +37,17 @@
 
 .e-makro__loyalty-links {
   display: flex;
+  gap: 25px;
   margin-bottom: 50px;
+
+  @include mq('tablet-wide', max) {
+
+  }
+
+  @include mq('tablet', max) {
+    flex-wrap: wrap;
+    gap: 0;
+  }
 }
 
 .e-makro__loyalty-link {
@@ -39,7 +61,19 @@
     opacity: 0.8;
   }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include mq('tablet', max) {
+    display: block;
+    width: 50%;
+  }
+
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+}
+
+.e-makro__button {
+
+  @include mq('tablet', max) {
+    display: block;
   }
 }

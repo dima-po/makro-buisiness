@@ -6,6 +6,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 500px;
+
+  @include mq('tablet', max) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(400px, 1fr));
+  }
 }
 
 .social-projects__item {
@@ -40,4 +45,16 @@
   text-align: center;
   color: $default-color;
   text-transform: uppercase;
+
+  @include mq('tablet-wide', max) {
+    font-size: 20px;
+  }
+
+  @include mq('tablet', max) {
+
+  }
+
+  @include mq('phone-wide', max) {
+
+  }
 }

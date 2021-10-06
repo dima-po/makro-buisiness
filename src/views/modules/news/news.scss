@@ -6,6 +6,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 500px;
+
+  @include mq('tablet', max) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 400px);
+  }
 }
 
 .news__card {

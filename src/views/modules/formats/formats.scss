@@ -12,6 +12,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 500px;
+
+  @include mq('tablet', max) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(400px, 1fr));
+  }
 }
 
 .formats__item {
@@ -32,18 +37,31 @@
     transition: all 0.3s;
   }
 
-  &:hover {
+  @include mq('tablet-wide') {
+    &:hover {
+      &::before {
+        background-color: rgba($main-font-color, 0.9);
+      }
+
+      .formats__headers {
+        top: 37%;
+      }
+
+      .formats__item-body {
+        bottom: 20%;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include mq('tablet-wide', max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     &::before {
-      background-color: rgba($main-font-color, 0.9);
-    }
-
-    .formats__headers {
-      top: 37%;
-    }
-
-    .formats__item-body {
-      bottom: 20%;
-      opacity: 1;
+      z-index: 1;
     }
   }
 }
@@ -51,6 +69,14 @@
 .formats__img-wrap {
   @include size(100%);
   margin: 0;
+
+  @include mq('tablet-wide', max) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 .formats__img {
@@ -63,11 +89,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include position-center();
   color: $default-color;
   user-select: none;
   transition: 0.3s;
+
+  @include mq('tablet-wide') {
+    @include position-center();
+  }
+
+  @include mq('tablet-wide', max) {
+    position: relative;
+    margin-bottom: 25px;
+    z-index: 10;
+  }
 }
 
 .formats__header-small {
@@ -85,16 +119,24 @@
 
 .formats__item-body {
   @include size(100%, auto);
-  position: absolute;
-  bottom: -10%;
-  left: 0;
   color: $default-color;
   text-align: center;
   transition: all 0.3s ease-out;
-  opacity: 0;
 
   & p {
     margin: 0;
+  }
+
+  @include mq('tablet-wide') {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    opacity: 0;
+  }
+
+  @include mq('tablet-wide', max) {
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -103,6 +145,11 @@
   font-size: 22px;
   line-height: 1.5;
   text-transform: uppercase;
+
+  @include mq('tablet-wide', max) {
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
 }
 
 .formats__item-body-footer {
