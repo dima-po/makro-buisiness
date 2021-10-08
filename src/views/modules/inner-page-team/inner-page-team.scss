@@ -11,6 +11,11 @@
   line-height: 1.7;
   background-color: $default-color;
   text-align: center;
+
+  @include mq('tablet-wide', max) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .makro-team__grid {
@@ -39,6 +44,10 @@
   color: $default-color;
   text-align: center;
   text-transform: uppercase;
+
+  @include mq('tablet', max) {
+    font-size: 30px;
+  }
 }
 
 .makro-team__cards {

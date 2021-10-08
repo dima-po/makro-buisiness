@@ -2,6 +2,10 @@
   position: relative;
   display: flex;
   min-height: 700px;
+
+  @include mq('tablet-wide', max) {
+    min-height: 550px;
+  }
 }
 
 .page-title__background {
@@ -17,13 +21,40 @@
     background-color: rgba($default-color, 0.93);
     content: "";
   }
+
+  @include mq('tablet-wide', max) {
+
+    &::before {
+      @include size(100%);
+      background-color: rgba($default-color, 0.6);
+    }
+  }
 }
 
 .page-title__content {
-  @include size(40%, 100%);
+  @include size(60%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include mq('desktop-wide') {
+    @include size(40%, 100%);
+  }
+
+  @include mq('tablet-wide', max) {
+    @include size(70%, 100%);
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  @include mq('tablet', max) {
+    @include size(100%);
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
 }
 
 .page-title__header {
@@ -34,6 +65,14 @@
   line-height: 1.3;
   text-transform: uppercase;
   word-wrap: break-word;
+
+  @include mq('tablet-wide', max) {
+    font-size: 60px;
+  }
+
+  @include mq('tablet', max) {
+    font-size: 40px;
+  }
 }
 
 .page-title__short-text {
@@ -41,4 +80,12 @@
   margin-bottom: 50px;
   font-size: 21px;
   line-height: 1.7;
+
+  @include mq('tablet-wide', max) {
+    font-size: 19px;
+  }
+
+  @include mq('tablet', max) {
+    font-size: 19px;
+  }
 }
