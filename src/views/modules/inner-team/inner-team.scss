@@ -1,0 +1,148 @@
+.makro-team__long-content {
+  position: relative;
+}
+
+.makro-team__description p {
+  margin: 0;
+  margin-bottom: 90px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 23px;
+  line-height: 1.7;
+  background-color: $default-color;
+  text-align: center;
+
+  @include mq('tablet-wide', max) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+.makro-team__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.makro-team__grid-header {
+  width: 100%;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 28px;
+  color: $makro-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.makro-team__cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  // gap: 60px;
+}
+
+.makro-team__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 0;
+  transition: all 0.2s;
+
+  &--active {
+    margin-bottom: 410px;
+    z-index: 100;
+  }
+
+  &:hover {
+    transition: all 0.2s;
+
+    .makro-team__card-person-name,
+    .makro-team__card-person-position {
+      color: $makro-color;
+    }
+  }
+
+  @include mq("tablet", max) {
+
+    &--active {
+      margin-bottom: 470px;
+    }
+  }
+}
+
+
+.makro-team__card-person-photo {
+  margin: 0;
+  padding: 0;
+  @include size(350px);
+
+  img {
+    @include size(100%, auto);
+  }
+
+  @include mq("tablet", max) {
+    @include size(auto);
+  }
+}
+
+.makro-team__card-person-name {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 1.7rem;
+  transition: all 0.2s;
+}
+
+.makro-team__card-person-position {
+  margin: 0;
+  transition: all 0.2s;
+}
+
+.makro-team__card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  @include size(300%, 350px);
+  margin-top: 30px;
+  padding: 20px;
+  background-color: $border-lighter;
+  pointer-events: none;
+  z-index: 10;
+
+  @include mq("desktop", max) {
+    @include size(200%, 350px);
+  }
+
+  @include mq("tablet", max) {
+    @include size(100%, 350px);
+  }
+
+  @include mq("phone", max) {
+    @include size(auto, auto);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    @include size(100%);
+    background-color: $border-lighter;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    @include size(100%);
+    background-color: $border-lighter;
+  }
+}

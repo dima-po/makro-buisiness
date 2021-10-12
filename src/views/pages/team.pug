@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Inner Page Design"
+  //- - const pageHeader = "Наша команда"
+
+block content
+  //- Site Header
+  include ../modules/header/header
+
+  main.page.page__inner
+
+    //- Inner Page Title
+    include ../modules/inner-page-title/inner-page-title
+
+    //- Team Grid
+    include ../modules/inner-team/inner-team
+
+    //- Secti News
+    include ../modules/news/news
+
+  //- Secti News
+  include ../modules/footer/footer
+
+  //- Site Footer
+  //- include ../modules/footer/footer
+block scripts
