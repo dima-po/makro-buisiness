@@ -5,12 +5,12 @@ section.makro-team.section.is-medium
       p Под руководством главного исполнительного директора менеджмент осуществляет оперативное управление компанией, обеспечивает работу функциональных подразделений и соблюдение всех применимых законодательных и иных нормативных актов, а также управление рисками, связанными с деятельностью компании.
 
     section.makro-team__content
-      section.makro-team__grid
+      section.makro-team__grid.makro-team__grid--single
         header.makro-team__grid-header Руководитель
         section.makro-team__cards
-          article.makro-team__card
+          article.makro-team__card.makro-team__card--single
             figure.makro-team__card-person-photo
-              img(src=require("../../../images/team-member.jpg"), width="400", height="400" alt="Роман Сайфулин")
+              img(src="images/team-member.jpg", width="400", height="400" alt="Роман Сайфулин")
             h3.makro-team__card-person-name Роман Сайфулин
             p.makro-team__card-person-position генеральный директор
 
@@ -19,20 +19,27 @@ section.makro-team.section.is-medium
         header.makro-team__grid-header Маркетинг
         section.makro-team__cards
 
-          article.makro-team__card.makro-team__card--active
+          article.makro-team__card
             figure.makro-team__card-person-photo
               img(src="images/team-member.jpg", width="400", height="400" alt="Роман Сайфулин")
             h3.makro-team__card-person-name John Doe
             p.makro-team__card-person-position Маркетинг
-            .makro-team__card-details
-              h4.makro-team__card-details-person-name John Doe
-              p.makro-team__card-details-person-position Маркетинг
-              p.makro-team__card-details-person-description Nunc malesuada finibus dui, posuere sodales erat sollicitudin non. Mauris auctor felis vel metus consequat, nec eleifend metus placerat. Vivamus venenatis dui at auctor tempus. Phasellus non diam a sem aliquet iaculis. Nunc ut euismod metus. Duis lobortis quis purus sed vulputate. In et ullamcorper urna.
 
+          article.makro-team__card
+            figure.makro-team__card-person-photo
+              img(src="images/team-member.jpg", width="400", height="400" alt="Роман Сайфулин")
+            h3.makro-team__card-person-name John Doe
+            p.makro-team__card-person-position Маркетинг
 
+          .makro-team__card-details
+            h4.makro-team__card-details-person-name John Doe
+            p.makro-team__card-details-person-position Маркетинг
+            p.makro-team__card-details-person-description Nunc malesuada finibus dui, posuere sodales erat sollicitudin non. Mauris auctor felis vel metus consequat, nec eleifend metus placerat. Vivamus venenatis dui at auctor tempus. Phasellus non diam a sem aliquet iaculis. Nunc ut euismod metus. Duis lobortis quis purus sed vulputate. In et ullamcorper urna.
+            button.makro-team__card-details-close Закрыть
+              +svg-image("icon-close", "makro-team__card-details-close-svg", 20, 20)
 
           - var n = 0;
-          while n < 5
+          while n < 6
             - ++n
             article.makro-team__card
               figure.makro-team__card-person-photo
