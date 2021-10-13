@@ -1,12 +1,14 @@
 document.addEventListener(
   'DOMContentLoaded', () => {
-
     const locations = document.querySelectorAll('.makro-locations__stores-group-item');
     const locationButton = document.querySelector('.makro-locations__menu-btn');
 
-    locationButton.addEventListener('click', () => {
-      locationButton.classList.toggle('makro-locations__menu-btn--active');
-    })
+    if (locationButton) {
+      locationButton.addEventListener('click', () => {
+        locationButton.classList.toggle('makro-locations__menu-btn--active');
+      })
+    }
+
     const removeAllActiveClass = () => {
       locations.forEach((elem) => {
         elem.classList.remove('makro-locations__stores-group-item--active');
