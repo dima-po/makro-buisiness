@@ -26,9 +26,6 @@
 
 
 .makro-team__grid {
-  // display: flex;
-  // justify-content: center;
-  // flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
@@ -58,6 +55,28 @@
   cursor: pointer;
   transition: all 0.2s;
   user-select: none;
+
+  &--active {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      @include triangle(30px, "down", $default-color);
+    }
+
+    & + .makro-team__card-details {
+      height: auto;
+      margin: 0 -30px 30px 15px;
+      overflow: visible;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
   &:hover {
     transition: all 0.2s;
@@ -111,22 +130,21 @@
   float: left;
   width: 100%;
   height: 0;
-  // margin: 0 -30px 30px 15px;
-  // padding: 60px 100px 60px 40px;
+  margin: 0 -30px 30px 15px;
   background-color: $light-color;
   text-align: left;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.2s;
   opacity: 0;
+  visibility: hidden;
 
-  &--active {
-    display: block;
-    height: auto;
-    margin: 0 -30px 30px 15px;
-    padding: 60px 100px 60px 40px;
-    overflow: visible;
-    opacity: 1;
-  }
+  // &--active {
+  //   height: auto;
+  //   margin: 0 -30px 30px 15px;
+  //   overflow: visible;
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
 
   &::after {
     content: "";
@@ -146,6 +164,19 @@
 
     @include size(100%);
     background-color: $light-color;
+  }
+
+  @include mq("desktop") {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.makro-team__card-details-content {
+  padding: 60px 100px 60px 40px;
+
+  @include mq("tablet", max) {
+    padding: 30px;
   }
 }
 

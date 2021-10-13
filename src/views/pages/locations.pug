@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Locations Page"
+
+block content
+  //- Site Header
+  include ../modules/header/header
+
+  main.page.page__inner
+
+    //- Inner Page Title
+    include ../modules/inner-page-title/inner-page-title
+
+    //- Loyalty
+    include ../modules/inner-location/inner-location
+
+    //- Secti News
+    include ../modules/news/news
+
+  //- Secti News
+  include ../modules/footer/footer
+
+  //- Site Footer
+  //- include ../modules/footer/footer
+block scripts

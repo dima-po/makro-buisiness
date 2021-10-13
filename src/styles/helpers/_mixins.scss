@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin font-face($name, $file, $weight) {
   @font-face {
     font-family: "#{$name}";
@@ -177,27 +179,27 @@
   height: 0;
 
   @if $direction == "up" {
-    border-left: $width / 2 solid transparent;
-    border-right: $width / 2 solid transparent;
-    border-bottom: $width / 2 solid $color;
+    border-left: math.div($width, 2) solid transparent;
+    border-right: math.div($width, 2) solid transparent;
+    border-bottom: math.div($width, 2) solid $color;
   }
 
   @else if $direction == "left" {
-    border-top: $width / 2 solid transparent;
-    border-bottom: $width / 2 solid transparent;
-    border-right: $width / 2 solid $color;
+    border-top: math.div($width, 2) solid transparent;
+    border-bottom: math.div($width, 2) solid transparent;
+    border-right: math.div($width, 2) solid $color;
   }
 
   @else if $direction == "right" {
-    border-top: $width / 2 solid transparent;
-    border-bottom: $width / 2 solid transparent;
-    border-left: $width / 2 solid $color;
+    border-top: math.div($width, 2) solid transparent;
+    border-bottom: math.div($width, 2) solid transparent;
+    border-left: math.div($width, 2) solid $color;
   }
 
   @else if $direction == "down" {
-    border-left: $width / 2 solid transparent;
-    border-right: $width / 2 solid transparent;
-    border-top: $width / 2 solid $color;
+    border-left: math.div($width, 2) solid transparent;
+    border-right: math.div($width, 2) solid transparent;
+    border-top: math.div($width, 2) solid $color;
   }
 
   @else {
