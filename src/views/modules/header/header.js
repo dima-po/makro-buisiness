@@ -25,12 +25,23 @@ mobileNav.addEventListener('click', () => {
 
 
 if (document.body.clientWidth < 1023) {
-  const mobileDropdownItem = document.querySelector('.nav__item--has-dropdown');
-  const mobileDropdown = document.querySelector('.nav__dropdown');
-  const mobileDropdownLink = document.querySelector('.nav__item--has-dropdown .nav__link');
 
-  mobileDropdownLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    mobileDropdown.classList.toggle('nav__dropdown--active');
+  const mobileDropdownItem = document.querySelector('.nav__item--has-dropdown');
+  const mobileDropdown = document.querySelectorAll('.nav__dropdown');
+  const mobileDropdownLinks = document.querySelectorAll('.nav__item--has-dropdown .nav__link');
+
+  const removeActiveLinkClass = () => {
+    mobileDropdownLinks.forEach((link) => {
+      link.classList.remove('nav__link--active');
+    })
+  }
+
+  mobileDropdownLinks.forEach((link) => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const currentElement = evt.target;
+      removeActiveLinkClass();
+      currentElement.classList.toggle('nav__link--active');
+    })
   })
 }

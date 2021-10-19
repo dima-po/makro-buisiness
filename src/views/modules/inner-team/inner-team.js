@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.makro-team__card');
 const cardClose = document.querySelector('.makro-team__card-details-close');
 const cardDetails = document.querySelector('.makro-team__card-details');
 
-if (cards) {
+if (cards && cardClose) {
 
   cardClose.addEventListener('click', () => {
     cards.forEach((card) => {

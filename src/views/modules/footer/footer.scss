@@ -33,6 +33,10 @@
   grid-template-rows: repeat(2, 1fr);
   row-gap: 60px;
   column-gap: 40px;
+
+  @include mq("phone-wide", max) {
+    grid-template-rows: repeat(2, auto);
+  }
 }
 
 .footer__menu {
@@ -51,6 +55,11 @@
 
   @include mq("tablet-wide", max) {
     width: 50%;
+    flex-grow: 0;
+  }
+
+  @include mq("phone-wide", max) {
+    width: 100%;
     flex-grow: 0;
   }
 }
@@ -91,6 +100,7 @@
   @include mq("tablet-wide", max) {
     flex-wrap: wrap;
     text-align: center;
+    row-gap: 30px;
   }
 }
 
@@ -131,6 +141,13 @@
 
   &:hover {
     background-color: $makro-color;
+  }
+}
+
+.footer__iso-certification {
+
+  img {
+    @include size(100%, auto);
   }
 }
 

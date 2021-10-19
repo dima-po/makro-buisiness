@@ -1,10 +1,11 @@
 .makro-locations__menu {
+  height: 100%;
   position: relative;
   z-index: 100;
 }
 
 .makro-locations__menu-btn {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -44,9 +45,11 @@
 }
 
 .makro-locations__menu-content {
-  margin-top: 15px;
+  height: 100%;
+  // margin-top: 15px;
   border-radius: 5px;
-  display: none;
+  // display: none;
+  background-color: #f1f1f1;
 }
 
 .makro-locations__stores-group {
@@ -78,6 +81,14 @@
       transform: translateY(calc(-50% + 3px)) rotate(-45deg);
       @include size(8px, 1px);
       background-color: $main-font-color;
+    }
+
+    &:hover {
+
+      .makro-locations__inner-list {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     @include mq("tablet", max) {
@@ -119,6 +130,11 @@
 
   &:hover {
     background-color: darken($light-color, 5%);
+
+    & + .makro-locations__inner-list {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
@@ -175,16 +191,11 @@
   }
 }
 
-
-
-
-
-
 .makro-locations__map {
 
   iframe {
     border: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 700px;
   }
 }

@@ -12,7 +12,7 @@
   align-items: center;
   z-index: 10;
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     padding: 10px;
   }
 }
@@ -22,11 +22,11 @@
 
   @include size(260px, 55px);
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     margin-right: auto;
   }
 
-  @include mq('phone-wide', max) {
+  @include mq("phone-wide", max) {
     flex-shrink: 1;
     margin-right: 25px;
   }
@@ -42,7 +42,7 @@
   margin-left: 30px;
   transition: all 0.2s;
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     position: absolute;
     top: 50%;
     left: 0;
@@ -73,7 +73,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     flex-direction: column;
     align-items: start;
   }
@@ -114,7 +114,7 @@
     }
   }
 
-  @include mq('tablet-wide') {
+  @include mq("tablet-wide") {
     &:hover .nav__dropdown {
       display: block;
       top: calc(100% + 0px);
@@ -131,7 +131,7 @@
     }
   }
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     width: 100%;
 
     &:not(:last-child) {
@@ -169,12 +169,21 @@
     font-size: 14px;
   }
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     display: block;
     width: 100%;
 
     &--dropdown {
       padding: 7px 20px;
+    }
+
+    &--active {
+
+      & + .nav__dropdown {
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 0;
+      }
     }
   }
 }
@@ -194,7 +203,7 @@
   pointer-events: none;
   visibility: hidden;
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     @include size(100%, 0);
     overflow: hidden;
     opacity: 1;
@@ -301,7 +310,7 @@
 
 .header__search {
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     margin-right: 20px;
   }
 }
@@ -355,7 +364,7 @@
     cursor: pointer;
   }
 
-  @include mq('tablet-wide', max) {
+  @include mq("tablet-wide", max) {
     &--search {
       left: 10px;
     }
@@ -407,7 +416,7 @@
     background-color: $makro-color;
   }
 
-  @include mq('tablet-wide') {
+  @include mq("tablet-wide") {
     display: none;
   }
 }
